@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; Ancient Ordinary</title>
+<meta name="description" content="Privacy Policy for Ancient Ordinary, including use of YouTube API Services, data retention and deletion.">
+<style>
+  :root{
+    --bg:#faf8f4; --card:#fffdfa; --ink:#1b1f24; --body:#3c434c;
+    --muted:#6f7883; --line:#e6e2da; --accent:#b4531f;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#14161a; --card:#1b1e23; --ink:#f2ede2; --body:#c8ccd2;
+           --muted:#8b939d; --line:#2b2f36; --accent:#e08a4e; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--body);
+       font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px}
+  .crumb{font-size:.9rem;margin:0 0 22px}
+  .crumb a{color:var(--muted)}
+  h1{font-size:2.1rem;margin:0 0 6px;color:var(--ink);letter-spacing:-.02em}
+  .eff{color:var(--muted);font-size:.95rem;margin:0 0 30px}
+  h2{font-size:1.2rem;color:var(--ink);margin:36px 0 12px;
+     padding-top:20px;border-top:1px solid var(--line)}
+  h2:first-of-type{border-top:0;padding-top:0}
+  p{margin:0 0 15px}
+  a{color:var(--accent)}
+  ul{margin:0 0 16px;padding-left:22px}
+  li{margin-bottom:9px}
+  .callout{background:var(--card);border:1px solid var(--line);
+           border-left:4px solid var(--accent);border-radius:10px;
+           padding:18px 22px;margin:22px 0}
+  .callout p:last-child{margin-bottom:0}
+  footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
+         color:var(--muted);font-size:.9rem}
+  footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="crumb"><a href="index.html">&larr; Ancient Ordinary</a></p>
+
+  <h1>Privacy Policy</h1>
+  <p class="eff">Effective 15 August 2026</p>
+
+  <p>Ancient Ordinary is a YouTube channel operated by an independent creator.
+  Episodes are published using a private command-line tool written and run by
+  that same person. This policy explains what that software handles, what this
+  website collects, and how to revoke its access.</p>
+
+  <div class="callout">
+    <p><strong>In short:</strong> the software has no users other than its
+    owner. It collects no personal information from visitors, viewers or any
+    third party. It reads and writes data for exactly one YouTube account
+    &mdash; the owner&rsquo;s own.</p>
+  </div>
+
+  <h2>1. This website</h2>
+  <p>This site is a set of static pages hosted on GitHub Pages. It has no
+  accounts, no login, no comment system, no analytics, no advertising and no
+  tracking cookies. We do not collect, store or share any personal information
+  about visitors. GitHub, as the host, may process standard server request logs
+  &mdash; see the
+  <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement">GitHub Privacy Statement</a>.</p>
+
+  <h2>2. Use of YouTube API Services</h2>
+  <p>The publishing software uses <strong>YouTube API Services</strong> to
+  upload finished videos to the owner&rsquo;s own channel and to read back
+  information about those same videos.</p>
+  <p>By using our software you agree to be bound by the
+  <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.
+  Google&rsquo;s handling of any data it receives is governed by the
+  <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+  <p>Specifically, the software calls:</p>
+  <ul>
+    <li><strong>videos.insert</strong> &mdash; upload an original video to the
+    owner&rsquo;s own channel, at most once per day.</li>
+    <li><strong>videos.list</strong> &mdash; read back the video just uploaded,
+    to confirm its title and privacy status are correct.</li>
+    <li><strong>channels.list</strong> &mdash; confirm the stored credential
+    points at the intended channel before anything is uploaded.</li>
+    <li><strong>YouTube Analytics</strong> &mdash; read views and audience
+    retention for the owner&rsquo;s own videos, to decide how long future
+    episodes should be.</li>
+  </ul>
+  <p>The software does not search YouTube, does not read any other
+  user&rsquo;s channel, videos, comments or subscriptions, and does not display
+  YouTube data to anyone.</p>
+
+  <h2>3. What is stored, and where</h2>
+  <p>Two things are stored, both on the owner&rsquo;s own computer, and neither
+  is transmitted anywhere:</p>
+  <ul>
+    <li><strong>An OAuth 2.0 credential</strong> for the owner&rsquo;s Google
+    account, granting the scopes <code>youtube.upload</code>,
+    <code>youtube.readonly</code> and <code>yt-analytics.readonly</code>. It is
+    held in a file readable only by the owner&rsquo;s user account.</li>
+    <li><strong>The video ID</strong> returned by each successful upload, with a
+    timestamp, in a local database, so the same video is never uploaded twice.</li>
+  </ul>
+  <p>No video content, channel data, viewer data, comments or personal
+  information belonging to any other person is ever stored.</p>
+
+  <h2>4. Revoking access</h2>
+  <p>The owner may revoke the software&rsquo;s access to their Google account at
+  any time from
+  <a href="https://myaccount.google.com/permissions">Google Security Settings &rarr; Third-party apps with account access</a>.
+  Revoking access immediately and permanently stops the software from being able
+  to upload or read anything.</p>
+
+  <h2>5. Deleting stored data</h2>
+  <p>Because everything is held locally, deletion is immediate and complete:
+  removing the credential file destroys the stored authorisation, and deleting
+  the local database removes the record of past uploads. There is no server-side
+  copy to request the deletion of, and no third party holds data on our behalf.</p>
+  <p>Videos already published can be removed at any time from YouTube Studio by
+  the channel owner.</p>
+
+  <h2>6. Children</h2>
+  <p>This site and the channel are intended for a general adult audience. We do
+  not knowingly collect information from anyone, including children.</p>
+
+  <h2>7. Changes to this policy</h2>
+  <p>If this policy changes, the revised version will be posted on this page with
+  a new effective date.</p>
+
+  <h2>8. Contact</h2>
+  <p>Questions about this policy:
+  <a href="mailto:andervideo777@gmail.com">andervideo777@gmail.com</a></p>
+
+  <footer>
+    <p><a href="index.html">Home</a> &middot;
+       <a href="terms.html">Terms of Service</a> &middot;
+       <a href="https://www.youtube.com/@ancientordinary1">YouTube channel</a></p>
+    <p>Uses <strong>YouTube API Services</strong>.
+    <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> &middot;
+    <a href="https://policies.google.com/privacy">Google Privacy Policy</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
